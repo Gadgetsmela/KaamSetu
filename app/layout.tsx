@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "KaamSetu",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </header>
         <main className="container-mobile py-4">{children}</main>
+        <SpeedInsights />
       </body>
     </html>
   );
